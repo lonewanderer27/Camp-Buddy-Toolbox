@@ -42,7 +42,8 @@ def about():
         f'PySimpleGUI Version: {sg.version}',
         title='About Camp Buddy Tool',
         grab_anywhere=True,
-        non_blocking=True)
+        non_blocking=True,
+        image='src/icon.png')
 
 
 def get_filename_from_path(rpapath: str) -> str:
