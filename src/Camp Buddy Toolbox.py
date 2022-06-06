@@ -12,7 +12,7 @@ from rpatool import RenPyArchive
 from unrpa import UnRPA
 
 title = 'Camp Buddy Toolbox'
-description = 'This program allows you to extract assets and scripts of Camp Buddy easily!'
+description = 'Camp Buddy Toolbox allows you to extract assets and scripts of Camp Buddy easily!'
 version_num = '0.3 Alpha'
 current_directory = os.getcwd
 debug_mode = True
