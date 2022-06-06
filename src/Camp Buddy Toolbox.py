@@ -11,7 +11,7 @@ from pprint import pprint
 from rpatool import RenPyArchive
 from unrpa import UnRPA
 
-title = 'Camp Buddy Tool'
+title = 'Camp Buddy Toolbox'
 description = 'This program allows you to extract and scripts of Camp Buddy easily!'
 version_num = 1.5
 current_directory = os.getcwd
