@@ -3,6 +3,7 @@ import subprocess
 import os
 import sys
 import ntpath
+import webbrowser
 from rpatool import RenPyArchive
 import PySimpleGUI as sg
 from pprint import pprint
@@ -10,6 +11,9 @@ from datetime import date
 
 def center(elements):
     return [sg.Push(), *elements, sg.Push()]
+
+def open_url(url):
+    webbrowser.open(url)
 
 def open_folder(path: str):
     if platform.system() == "Windows":
