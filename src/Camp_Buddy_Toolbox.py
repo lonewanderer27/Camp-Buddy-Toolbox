@@ -71,23 +71,23 @@ def get_main_window():
         [sg.VPush()],
     ]
 
-    extract_scripts_to_dir_column = [
+    extract_dialogs_to_dir_column = [
         [sg.Text('Destination Folder:'), sg.Input(key='-es_dest_folder-', expand_x=True),
         sg.FolderBrowse(key='-es_folder_browse-')]
     ]
 
-    extract_scripts_to_file_column = [
+    extract_dialogs_to_file_column = [
         [sg.Text('Destination File:'), sg.Input(key='-es_dest_file-', expand_x=True),
         sg.FileSaveAs(key='-es_file_save_as-', file_types=(('CSV File', '.csv'), ('Text File', '.txt')), )]
     ]
 
-    extract_scripts_tab = [
-        [sg.Text('Folder Containing .py Files:'), sg.Input(key='-py_scripts_folder-'), sg.FolderBrowse()],
+    extract_dialogs_tab = [
+        [sg.Text('Folder Containing .rpy Files:'), sg.Input(key='-py_dialogs_folder-'), sg.FolderBrowse()],
         [sg.Text('Game:'),
         sg.Combo(['Camp Buddy', 'Camp Buddy: Scoutmasters Edition'], default_value='Camp Buddy', enable_events=True,
                 expand_x=True, readonly=True, key='-game_selection_changed-')],
         [sg.VPush()],
-        center([sg.Text('Check the characters you want to extract the script:')]),
+        center([sg.Text('Check the characters you want to extract the dialog:')]),
         center([sg.pin(sg.Column(cb_chars, key="-cb_chars-", expand_x=True), vertical_alignment='c')]),
         center([sg.pin(sg.Column(cb_sm_chars, key="-cb_sm_chars-", visible=False, expand_x=True), vertical_alignment='c')]),
         [sg.VPush()],
@@ -95,9 +95,9 @@ def get_main_window():
         sg.Radio('All characters in one file', 'es_option1', key='-all_chars_in_1_file-', default=True,
                 enable_events=True),
         sg.Radio('One character per file', 'es_option1', key='-1_char_per_file-', enable_events=True)],
-        [sg.pin(sg.Column(extract_scripts_to_file_column, key='-es_to_file_column-', expand_x=True))],
-        [sg.pin(sg.Column(extract_scripts_to_dir_column, key='-es_to_dir_column-', expand_x=True, visible=False))],
-        [sg.Button("Extract Scripts", key='-extract_scripts_btn-', expand_x=True)]
+        [sg.pin(sg.Column(extract_dialogs_to_file_column, key='-es_to_file_column-', expand_x=True))],
+        [sg.pin(sg.Column(extract_dialogs_to_dir_column, key='-es_to_dir_column-', expand_x=True, visible=False))],
+        [sg.Button("Extract Dialogs", key='-extract_dialogs_btn-', expand_x=True, button_color='Green')]
     ]
 
     extract_assets_tab = [
@@ -107,7 +107,7 @@ def get_main_window():
         [sg.Listbox(values=[], key="-rpa_file_list-", expand_x=True, size=(None, 20), horizontal_scroll=True)],
         [sg.Text('Destination Folder:'), sg.Input(key='-ea_dest_folder-', expand_x=True), sg.FolderBrowse()],
         [
-            sg.Button("Extract Assets", key='-extract_assets_btn-', expand_x=True), 
+            sg.Button("Extract Assets", key='-extract_assets_btn-', expand_x=True, button_color='Green'), 
             sg.Button("Cancel", button_color='Red', key='-cancel_extract_assets_btn-', expand_x=True, visible=False)
         ],
         # [sg.Button("Perform Long Operation", key='-extract_assets_btn-', expand_x=True)]
@@ -115,7 +115,7 @@ def get_main_window():
 
     main_column = [
         [sg.TabGroup([
-            [sg.Tab('Extract Assets', extract_assets_tab), sg.Tab('Extract Scripts', extract_scripts_tab)]
+            [sg.Tab('Extract Assets', extract_assets_tab), sg.Tab('Extract Dialogs', extract_dialogs_tab)]
         ], expand_x=True, tab_location="Top", enable_events=True, key='-switched_tab-')],
     ]
 
@@ -266,7 +266,7 @@ def ea_done(values):
     reset_status()
 
 
-# FUNCTIONS RELATED TO EXTRACTING SCRIPTS TAB
+# FUNCTIONS RELATED TO EXTRACTING DIALOGS TAB
 
 def switch_to_cb():
     window['-cb_sm_chars-'].update(visible=False)
@@ -356,7 +356,7 @@ while True:
         update_status("long ops 2 has completed!")
 
 
-    # EXTRACT SCRIPTS TAB
+    # EXTRACT DIALOGS TAB
 
     if event == '-all_chars_in_1_file-':
         all_chars_in_one_file(values)

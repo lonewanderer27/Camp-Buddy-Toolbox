@@ -2,8 +2,8 @@ import PySimpleGUI as sg
 from tools import center, resource_path, todays_date, open_url
 
 title = 'Camp Buddy Toolbox'
-description = 'Camp Buddy Toolbox allows you to extract assets and scripts of Camp Buddy easily!'
-short_description = 'Allows you to extract assets and scripts of Camp Buddy easily!'
+description = 'Camp Buddy Toolbox allows you to extract assets and dialogs of Camp Buddy easily!'
+short_description = 'Allows you to extract assets and dialogs of Camp Buddy easily!'
 version_num = '0.3 Alpha'
 website_link = 'https://github.com/lonewanderer27/Camp-Buddy-Toolbox'
 github_username = 'lonewanderer27'
