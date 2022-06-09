@@ -106,7 +106,10 @@ def get_main_window():
         [sg.Text('RPA File Contents:'), sg.Push(), sg.Button('View Content')],
         [sg.Listbox(values=[], key="-rpa_file_list-", expand_x=True, size=(None, 20), horizontal_scroll=True)],
         [sg.Text('Destination Folder:'), sg.Input(key='-ea_dest_folder-', expand_x=True), sg.FolderBrowse()],
-        [sg.Button("Extract Assets", key='-extract_assets_btn-', expand_x=True)],
+        [
+            sg.Button("Extract Assets", key='-extract_assets_btn-', expand_x=True), 
+            sg.Button("Cancel", button_color='Red', key='-cancel_extract_assets_btn-', expand_x=True, visible=False)
+        ],
         # [sg.Button("Perform Long Operation", key='-extract_assets_btn-', expand_x=True)]
     ]
 
@@ -132,8 +135,8 @@ def get_main_window():
     return main_window
     
 window = get_main_window()
-ea_mode = True
 long_operation = False
+ea_mode = True
 
 
 # FUNCTIONS FOR GENERAL USE
@@ -158,20 +161,20 @@ def reset_status():
 def dest_folder_empty():
     update_status("Error. Destination folder is empty")
 
+def long_operation_ongoing(text: str):
+    sg.popup_ok(text, title='Program is Busy', non_blocking=True)
+
 
 # FUNCTIONS RELATED TO EXTRACTING ASSETS TAB!
 
 def rpa_filepath_empty():
     update_status("Error. No RPA file selected")
 
-
 def update_rpa_file_list(values):
     window["-rpa_file_list-"].update(values)
 
-
 def clear_rpa_file_list():
     window["-rpa_file_list-"].update(values=[])
-
 
 def ea_checks(values):
     rpapath = values['-ea_rpa_path-']
@@ -186,7 +189,6 @@ def ea_checks(values):
     else:
         return True
 
-
 def ea_view_content(values):
     rpapath = values['-ea_rpa_path-']
     if not ea_checks(values):
@@ -195,6 +197,11 @@ def ea_view_content(values):
         update_rpa_file_list(list_rpa_files_2(rpapath))
         update_status(f'{get_filename_from_path(rpapath)} contents listed')
 
+def disable_ea_extract_assets_btn():
+    window['-extract_assets_btn-'].update(button_color='Gray', disabled = True)
+
+def enable_ea_extract_assets_btn():
+    window['-extract_assets_btn-'].update(button_color='Green', disabled = False)
 
 def ea_extract_assets(values):
     rpapath = values['-ea_rpa_path-']
@@ -216,11 +223,15 @@ def ea_extract_assets(values):
         verbosity=verbosity
     )
     window.perform_long_operation(unrpa.extract_files, '-ea_done-')
-
+    long_operation = True
+    disable_ea_extract_assets_btn()
 
 def ea_done(values):
     rpapath = values['-ea_rpa_path-']
     ea_dest_folder = values["-ea_dest_folder-"]
+
+    # Enable the extract assets button
+    enable_ea_extract_assets_btn()
 
     # Make the progress bar 100% to indicate completeness
     finish_progress_bar()
@@ -261,11 +272,9 @@ def switch_to_cb():
     window['-cb_sm_chars-'].update(visible=False)
     window['-cb_chars-'].update(visible=True)
 
-
 def switch_to_cb_sm():
     window['-cb_chars-'].update(visible=False)
     window['-cb_sm_chars-'].update(visible=True)
-
 
 def switch_game(values):
     if values['-game_selection_changed-'] == 'Camp Buddy':
@@ -273,18 +282,15 @@ def switch_game(values):
     else:
         switch_to_cb_sm()
 
-
 def all_chars_in_one_file(values):
     # -es_file_save_as-
     window['-es_to_file_column-'].update(visible=True)
     window['-es_to_dir_column-'].update(visible=False)
 
-
 def one_char_per_file(values):
     # -es_folder_browse-
     window['-es_to_file_column-'].update(visible=False)
     window['-es_to_dir_column-'].update(visible=True)
-
 
 def long_ops_2(window, number):
     window.Refresh()
