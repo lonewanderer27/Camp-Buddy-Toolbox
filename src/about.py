@@ -5,7 +5,6 @@ title = 'Camp Buddy Toolbox'
 description = 'Camp Buddy Toolbox allows you to extract assets and dialogs of Camp Buddy easily!'
 short_description = 'Allows you to extract assets and dialogs of Camp Buddy easily!'
 version_num = '0.3 Alpha'
-website_link = 'https://github.com/lonewanderer27/Camp-Buddy-Toolbox'
 github_username = 'lonewanderer27'
 my_github_link = 'https://github.com/lonewanderer27'
 nickname = 'Jay'
@@ -23,7 +22,6 @@ def get_about_window():
         center([sg.Text(text=title)]),
         center([sg.Text(text=version_num)]),
         center([sg.Text(text=short_description)]),
-        center([sg.Text(text='GitHub Repo', key='-website-', enable_events=True)]),
         center([sg.Text(text=f'Copyright © {todays_date.year} {github_username} ({nickname})')]),
         center([sg.Text(text='This program comes with absolutely no warranty.\nSee the GNU General Public License 3 for details.'
         )])
@@ -44,7 +42,7 @@ def get_about_window():
     credits_tab = [
         center([sg.Image(resource_path('icon.png'))]),
         center([sg.Text(title)]),
-        center([sg.vtop(sg.Column(left_credits_column)), sg.vtop(sg.Column(right_credits_column))])
+        center([sg.vtop(sg.Column(left_credits_column, element_justification='right')), sg.vtop(sg.Column(right_credits_column))])
     ]
 
     license_tab = [
@@ -62,15 +60,4 @@ def get_about_window():
     return sg.Window(title=f'About {title}', layout=about_window_layout, icon='icon.png', finalize=True)
 
 def about():
-    # about_window = get_about_window()
-    # while True:
-    #     event3, values3 = about_window.read(timeout=0)
-
-    #     if event3 == sg.WIN_CLOSED:
-    #         break
-
-    #     if event3 == '-website-':
-    #         open_url(website_link)
-        
-    # about_window.close()
     about_window = get_about_window()
