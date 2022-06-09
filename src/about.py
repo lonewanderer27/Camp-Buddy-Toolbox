@@ -21,6 +21,7 @@ def get_about_window():
         center([sg.Image(resource_path('icon.png'))]),
         center([sg.Text(text=title)]),
         center([sg.Text(text=version_num)]),
+        center([sg.Text(text=f'PySimpleGUI: {sg.version}')]),
         center([sg.Text(text=short_description)]),
         center([sg.Text(text=f'Copyright © {todays_date.year} {github_username} ({nickname})')]),
         center([sg.Text(text='This program comes with absolutely no warranty.\nSee the GNU General Public License 3 for details.'
