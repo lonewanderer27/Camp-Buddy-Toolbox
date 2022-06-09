@@ -56,7 +56,7 @@ def valid_rpa_file(rpafile: str) -> tuple:
     except ValueError as e:
         return False, "Error. Invalid archive"
     else:
-        return True, f"loading {get_filename_from_path(rpafile)}"
+        return True, f"Loading {get_filename_from_path(rpafile)}"
 
 def list_rpa_files(rpafile: str) -> list:
     rpaprocessor = RenPyArchive(rpafile)

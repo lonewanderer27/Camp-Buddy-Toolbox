@@ -65,16 +65,9 @@ def get_main_window():
         sg.Checkbox("Taiga", key='-cb_sm_taiga-'), sg.Push(), sg.Checkbox("Yoichi", key='-cb_sm_yoichi-'), sg.Push(),
         sg.Checkbox("Natsumi", key='-cb_sm_natsumi-'), sg.Push(), sg.Checkbox("Hunter", key='-cb_sm_hunter-')],
         [sg.VPush()],
-        [sg.Checkbox("Hiro", key='-cb_sm_hiro-'), sg.Push(), sg.Checkbox("Keitaro", key='cb_sm_keitaro-'), sg.Push(),
+        [sg.Push(), sg.Checkbox("Hiro", key='-cb_sm_hiro-'), sg.Push(), sg.Checkbox("Keitaro", key='cb_sm_keitaro-'), sg.Push(),
         sg.Checkbox("Yuri", key='-cb_sm_yuri-'), sg.Push(), sg.Checkbox("Goro", key='-cb_sm_goro-'), sg.Push(),
-        sg.Checkbox("Aiden", key='-cb_sm_aiden-'), sg.Push(), sg.Checkbox("Young Emilia", key='-cb_sm_y_emilia-')],
-        [sg.VPush()],
-        [sg.Checkbox("Young Darius", key='-cb_sm_y_darius-'), sg.Push(), sg.Checkbox("Young Lloyd", key='-cb_sm_y_lloyd-'),
-        sg.Push(), sg.Checkbox("Young Goro", key='-cb_sm_y_goro-'), sg.Push(),
-        sg.Checkbox("Young Yoshi", key='-cb_sm_y_yoshi-')],
-        [sg.VPush()],
-        [sg.Push(), sg.Checkbox("Young Aiden", key='-cb_sm_y_aiden-'), sg.Checkbox("Young Yuri", key='-cb_sm_y_yuri-'),
-        sg.Push()],
+        sg.Checkbox("Aiden", key='-cb_sm_aiden-'), sg.Push()],
         [sg.VPush()],
     ]
 
@@ -135,7 +128,7 @@ def get_main_window():
         [sg.Text('Status:'), sg.Text('Idle', key='-current_status-', size=(75, None), auto_size_text=True)],
     ]
 
-    main_window = sg.Window(title=title, layout=master_layout)
+    main_window = sg.Window(title=title, layout=master_layout, icon="icon.png")
     return main_window
     
 window = get_main_window()

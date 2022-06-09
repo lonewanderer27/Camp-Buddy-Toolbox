@@ -32,7 +32,7 @@ def get_about_window():
     left_credits_column = [
         [sg.Text('Created by:')],
         [sg.Text('Artwork by:\n')],
-        [sg.Text('Used Libraries\n\n\n')]
+        [sg.Text('Used Libraries:\n\n\n')]
     ]
 
     right_credits_column = [
@@ -59,17 +59,18 @@ def get_about_window():
         ], tab_location='top')]
     ]
 
-    return sg.Window(title=f'About {title}', layout=about_window_layout)
+    return sg.Window(title=f'About {title}', layout=about_window_layout, icon='icon.png', finalize=True)
 
 def about():
-    while True:
-        about_window = get_about_window()
-        event3, values3 = about_window.read()
+    # about_window = get_about_window()
+    # while True:
+    #     event3, values3 = about_window.read(timeout=0)
 
-        if event3 == sg.WIN_CLOSED:
-            break
+    #     if event3 == sg.WIN_CLOSED:
+    #         break
 
-        if event3 == '-website-':
-            open_url(website_link)
+    #     if event3 == '-website-':
+    #         open_url(website_link)
         
-    about_window.close()
+    # about_window.close()
+    about_window = get_about_window()
