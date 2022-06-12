@@ -30,8 +30,6 @@
   <img src="Screenshots/Screenshot_Extract_Assets_Tab.png" alt="Logo">
 </div>
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
-
 There are many great RPA Extractors on GitHub; one of them is <a href="https://github.com/Lattyware/unrpa">UnRPA</a>. And once upon a time, I wanted to create a Discord chatbot that speaks exactly like Keitaro, however, none have written a dialog extractor specifically for Camp Buddy, so I wrote one <a href="https://github.com/lonewanderer27/Camp-Buddy-Dialog-Extractor">here</a>.
 
 But still both of these tools are command line interface apps, meaning a user would have to know how to use a terminal which is not user friendly...
