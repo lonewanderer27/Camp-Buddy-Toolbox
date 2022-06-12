@@ -311,6 +311,7 @@ def ea_done(values):
     reset_status()
 
 
+
 # FUNCTIONS RELATED TO EXTRACTING DIALOGS TAB     
 
 def switch_game(values):
