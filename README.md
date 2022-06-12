@@ -39,6 +39,10 @@ So I thought to myself.. why not combine these tools (and more that I can think 
 
 Features:
 * Preview and Extract the contents of an RPA file
-* Extract dialogs of Camp Buddy characters onto a csv file that can be used to make a Discord chatbot
+* Extract dialogs of Camp Buddy characters onto a CSV file that can be used to make a Discord chatbot
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
+### Built With [PySimpleGUI](https://pysimplegui.readthedocs.io/en/latest/)
