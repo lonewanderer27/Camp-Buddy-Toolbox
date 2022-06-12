@@ -68,7 +68,7 @@ Don't forget to give the project a star! Thanks again!
 <!-- LICENSE -->
 ## License
 
-Distributed under the The GNU General Public License v3.0. See `COPYING` for more information.
+Camp Buddy Toolbox is distributed under the The GNU General Public License v3.0. See `COPYING` for more information.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
