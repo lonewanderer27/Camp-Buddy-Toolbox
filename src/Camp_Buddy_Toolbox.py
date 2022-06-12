@@ -130,8 +130,8 @@ def get_main_window():
         [sg.Text('Export Options:'), sg.Push(), sg.Push(), sg.Push(),
         sg.Radio('Export to File', group_id='ed_export_options', key='-export_to_file-', default=True, enable_events=True),
         sg.Radio('Export to Folder', group_id='ed_export_options', key='-export_to_folder-', enable_events=True)],
-        [sg.Text('Destination File:'), sg.Input(key='-ed_dest_file-', expand_x=True), sg.FileSaveAs(key='-ed_dest_file_save_as-', file_types=(('CSV File', '.csv'), ('Text File', '.txt')), )],
-        [sg.Text('Destination Folder:'), sg.Input(key='-ed_dest_folder-', expand_x=True), sg.FolderBrowse(key='-ed_dest_folder_browse-')],
+        [sg.Text('Destination File:', key='-ed_dest_file_txt-'), sg.Input(key='-ed_dest_file-', expand_x=True), sg.FileSaveAs(key='-ed_dest_file_save_as-', file_types=(('CSV File', '.csv'), ('Text File', '.txt')), ), 
+        sg.Text('Destination Folder:', key='-ed_dest_folder_txt-'), sg.Input(key='-ed_dest_folder-', expand_x=True), sg.FolderBrowse(key='-ed_dest_folder_browse-')],
         [sg.Button("Extract Dialogs", key='-extract_dialogs_btn-', expand_x=True, button_color='Green')]
     ]
 
@@ -323,16 +323,20 @@ def switch_game(values):
         window['-cb_sm_chars-'].update(visible=True)
 
 def export_to_file():
-    window['-ed_dest_folder-'].update(disabled=True)
-    window['-ed_dest_folder_browse-'].update(disabled=True)
-    window['-ed_dest_file-'].update(disabled=False)
-    window['-ed_dest_file_save_as-'].update(disabled=False)
+    window['-ed_dest_folder_txt-'].update(visible=False)
+    window['-ed_dest_file_txt-'].update(visible=True)
+    window['-ed_dest_folder-'].update(visible=True)
+    window['-ed_dest_folder_browse-'].update(visible=True)
+    window['-ed_dest_file-'].update(visible=False)
+    window['-ed_dest_file_save_as-'].update(visible=False)
 
 def export_to_folder():
-    window['-ed_dest_folder-'].update(disabled=False)
-    window['-ed_dest_folder_browse-'].update(disabled=False)
-    window['-ed_dest_file-'].update(disabled=True)
-    window['-ed_dest_file_save_as-'].update(disabled=True)
+    window['-ed_dest_folder_txt-'].update(visible=True)
+    window['-ed_dest_file_txt-'].update(visible=False)
+    window['-ed_dest_folder-'].update(visible=False)
+    window['-ed_dest_folder_browse-'].update(visible=False)
+    window['-ed_dest_file-'].update(visible=True)
+    window['-ed_dest_file_save_as-'].update(visible=True)
 
 def rpy_files_folder_path_empty():
     update_status('Error. Folder containing .rpy Files is empty')
