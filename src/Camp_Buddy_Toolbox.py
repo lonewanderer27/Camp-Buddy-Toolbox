@@ -107,10 +107,10 @@ def get_main_window():
 
     extract_assets_tab = [
         [sg.Text('RPA File:'), sg.Input(key='-ea_rpa_path-', expand_x=True),
-        sg.FileBrowse(file_types=(('RPA Archives', '*.rpa'),))],
-        [sg.Text('RPA File Contents:'), sg.Push(), sg.Button('View Content')],
+        sg.FileBrowse(key='-ea_filebrowse-', file_types=(('RPA Archives', '*.rpa'),))],
+        [sg.Text('RPA File Contents:'), sg.Push(), sg.Button('View Content', key='-ea_viewcontent-')],
         [sg.Listbox(values=[], key="-rpa_file_list-", expand_x=True, size=(None, 20), horizontal_scroll=True)],
-        [sg.Text('Destination Folder:'), sg.Input(key='-ea_dest_folder-', expand_x=True), sg.FolderBrowse()],
+        [sg.Text('Destination Folder:'), sg.Input(key='-ea_dest_folder-', expand_x=True), sg.FolderBrowse(key='-ea_folderbrowse-')],
         [
             sg.Button("Extract Assets", key='-extract_assets_btn-', expand_x=True, button_color='Green'), 
             sg.Button("Cancel", button_color='Red', key='-cancel_extract_assets_btn-', expand_x=True, visible=False)
@@ -120,7 +120,7 @@ def get_main_window():
 
     main_column = [
         [sg.TabGroup([
-            [sg.Tab('Extract Assets', extract_assets_tab), sg.Tab('Extract Dialogs', extract_dialogs_tab)]
+            [sg.Tab('Extract Assets', extract_assets_tab, key='-ea_tab-'), sg.Tab('Extract Dialogs', extract_dialogs_tab, key='-ed_tab-')]
         ], expand_x=True, tab_location="Top", enable_events=True, key='-switched_tab-')],
     ]
 
@@ -202,10 +202,20 @@ def ea_view_content(values):
         update_rpa_file_list(list_rpa_files_2(rpapath))
         update_status(f'{get_filename_from_path(rpapath)} contents listed')
 
-def disable_ea_extract_assets_btn():
+def disable_ea_tab_elements():
+    # DISABLE EXTRACT ASSETS BUTTON
+    window['-ea_rpa_path-'].update(disabled=True)
+    window['-rpa_file_list-'].update(disabled=True)
+    window['-ea_filebrowse-'].update(disabled=True)
+    window['-ea_folderbrowse-'].update(disabled=True)
     window['-extract_assets_btn-'].update(button_color='Gray', disabled = True)
 
-def enable_ea_extract_assets_btn():
+def enable_ea_tab_elements():
+    window['-ea_rpa_path-'].update(disabled=False)
+    window['-rpa_file_list-'].update(disabled=False)
+    window['-ea_viewcontent-'].update(disabled=False)
+    window['-ea_filebrowse-'].update(disabled=False)
+    window['-ea_folderbrowse-'].update(disabled=False)
     window['-extract_assets_btn-'].update(button_color='Green', disabled = False)
 
 def extract_assets(values):
@@ -229,14 +239,14 @@ def extract_assets(values):
     )
     window.perform_long_operation(unrpa.extract_files, '-ea_done-')
     long_operation = True
-    disable_ea_extract_assets_btn()
+    disable_ea_tab_elements()
 
 def ea_done(values):
     rpapath = values['-ea_rpa_path-']
     ea_dest_folder = values["-ea_dest_folder-"]
 
     # Enable the extract assets button
-    enable_ea_extract_assets_btn()
+    enable_ea_tab_elements()
 
     # Make the progress bar 100% to indicate completeness
     finish_progress_bar()
@@ -321,7 +331,7 @@ while True:
 
     # EXTRACT ASSETS TAB
 
-    if event == 'View Content':
+    if event == '-ea_viewcontent-':
         ea_view_content(values)
 
     if event == '-cb_selected-':
