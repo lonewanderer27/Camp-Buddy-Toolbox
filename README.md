@@ -22,3 +22,21 @@
     <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
   </p>
 </div>
+
+<!-- ABOUT THE PROJECT -->
+## About The Project
+
+[![Product Name Screen Shot][product-screenshot]](Screenshots/Screenshot_Extract_Assets_Tab.png)
+
+There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+
+There are many great RPA Extractors on GitHub; one of them is <a href="https://github.com/Lattyware/unrpa">UnRPA</a>. And once upon a time, I wanted to create a Discord chatbot that speaks exactly like Keitaro, however, none have written a dialog extractor specifically for Camp Buddy, so I wrote one <a href="https://github.com/lonewanderer27/Camp-Buddy-Dialog-Extractor">here</a>.
+
+But still both of these tools are command line interface apps, meaning a user would have to know how to use a terminal which is not user friendly...
+So I thought to myself.. why not combine these tools (and more that I can think of in the future) into an easy to use application?
+
+Features:
+* Preview and Extract the contents of an RPA file
+* Extract dialogs of Camp Buddy characters onto a csv file that can be used to make a Discord chatbot
+
+<p align="right">(<a href="#top">back to top</a>)</p>
