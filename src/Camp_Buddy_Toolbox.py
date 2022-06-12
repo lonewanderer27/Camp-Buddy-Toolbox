@@ -37,37 +37,42 @@ def get_main_window():
 
     cb_chars = [
         [sg.VPush()],
-        [sg.Checkbox("Yuri", key='-cb_yuri-'), sg.Push(), sg.Checkbox("Hunter", key='-cb_hunter-'), sg.Push(),
-        sg.Checkbox("Taiga", key='-cb_taiga-'), sg.Push(), sg.Checkbox("Yuki", key='-cb_yuki-'), sg.Push(),
-        sg.Checkbox("Seto", key='-cb_seto-'), sg.Push(), sg.Checkbox("Eduard", key='-cb_eduard-'), ],
+        [sg.Checkbox("Yuri", key='-yu-'), sg.Push(), sg.Checkbox("Hunter", key='-hu-'), sg.Push(),
+        sg.Checkbox("Taiga", key='-t-'), sg.Push(), sg.Checkbox("Yuki", key='-y-'), sg.Push(),
+        sg.Checkbox("Seto", key='-s-'), sg.Push(), sg.Checkbox("Eduard", key='-e-'), ],
         [sg.VPush()],
-        [sg.Checkbox("Felix", key='-cb_felix-'), sg.Push(), sg.Checkbox("Kieran", key='-cb_kieran-'), sg.Push(),
-        sg.Checkbox("Lee", key='-cb_lee-'), sg.Push(), sg.Checkbox("Hina Akiba", key='-cb_hina-'), sg.Push(),
-        sg.Checkbox("Natsumi", key='-cb_natsumi-'), sg.Push(), sg.Checkbox("Yoichi", key='-cb_yoichi-')],
+        [sg.Checkbox("Felix", key='-f-'), sg.Push(), sg.Checkbox("Kieran", key='-ki-'), sg.Push(),
+        sg.Checkbox("Lee", key='-l-'), sg.Push(), sg.Checkbox("Hina", key='-hm-'), sg.Push(),
+        sg.Checkbox("Natsumi", key='-n-'), sg.Push(), sg.Checkbox("Yoichi", key='-yi-')],
         [sg.VPush()],
-        [sg.Checkbox("Keitaro", key='-cb_keitaro-'), sg.Push(), sg.Checkbox("Hiro", key='-cb_hiro-'), sg.Push(),
-        sg.Checkbox("Goro", key='-cb_goro-'), sg.Push(), sg.Checkbox("Yoshi", key='-cb_yoshi-'), sg.Push(),
-        sg.Checkbox("Aiden", key='-cb_aiden-'), sg.Push(), sg.Checkbox("Naoto", key='-cb_naoto-')],
+        [sg.Checkbox("Keitaro", key='-k-'), sg.Push(), sg.Checkbox("Hiro", key='-hi-'), sg.Push(),
+        sg.Checkbox("Goro", key='-g-'), sg.Push(), sg.Checkbox("Yoshi", key='-yo-'), sg.Push(),
+        sg.Checkbox("Aiden", key='-a-'), sg.Push(), sg.Checkbox("Naoto", key='-na-')],
         [sg.VPush()],
-        [sg.Checkbox("Heather Springfield", key='-cb_heather-'), sg.Push(),
-        sg.Checkbox("Archer Springfield", key='-cb_archer-'), sg.Push(),
-        sg.Checkbox("William Clermont", key='-cb_william-')],
+        [sg.Checkbox("Heather", key='-he-'), sg.Push(), sg.Checkbox("Archer", key='-ar-'), sg.Push(),
+        sg.Checkbox("William", key='-w-'), sg.Push(), sg.Checkbox("Rayne", key='-ra-'), sg.Push(),
+        sg.Checkbox('Toshu', key='-to-'), sg.Push(), sg.Checkbox('Ichiru', key='-ic-')],
         [sg.VPush()],
+        [sg.Checkbox('Connor', key='-co-'), sg.Push(), sg.Checkbox('Jirou', key='-ji-'), sg.Push(),
+        sg.Checkbox('Avan', key='-ha-'), sg.Push(), sg.Checkbox('Yuuto', key='-yt-'), sg.Push(),
+        sg.Checkbox('Haruki', key='-hr-'), sg.Push(), sg.Checkbox('Noah', key='-no-')],
+        [sg.VPush()],
+        [sg.Push(), sg.Checkbox('Chiaki', key='-ch-'), sg.Push()]
     ]
 
     cb_sm_chars = [
         [sg.VPush()],
-        [sg.Checkbox("Andre", key='-cb_sm_andre-'), sg.Push(), sg.Checkbox("Lloyd", key='-cb_sm_lloyd-'), sg.Push(),
-        sg.Checkbox("Darius", key='-cb_sm_darius-'), sg.Push(), sg.Checkbox("Emilia", key='-cb_sm_emilia-'), sg.Push(),
-        sg.Checkbox("Jin", key='-cb_sm_jin-'), sg.Push(), sg.Checkbox("Vera", key='-cb_sm_vera-')],
+        [sg.Checkbox("Andre", key='-u-'), sg.Push(), sg.Checkbox("Lloyd", key='-l-'), sg.Push(),
+        sg.Checkbox("Darius", key='-d-'), sg.Push(), sg.Checkbox("Emilia", key='-e-'), sg.Push(),
+        sg.Checkbox("Jin", key='-j-'), sg.Push(), sg.Checkbox("Vera", key='-v-')],
         [sg.VPush()],
-        [sg.Checkbox("Yoshi", key='-cb_sm_yoshi-'), sg.Push(), sg.Checkbox("Naoto", key='-cb_sm_naoto-'), sg.Push(),
-        sg.Checkbox("Taiga", key='-cb_sm_taiga-'), sg.Push(), sg.Checkbox("Yoichi", key='-cb_sm_yoichi-'), sg.Push(),
-        sg.Checkbox("Natsumi", key='-cb_sm_natsumi-'), sg.Push(), sg.Checkbox("Hunter", key='-cb_sm_hunter-')],
+        [sg.Checkbox("Yoshi", key='-yo-'), sg.Push(), sg.Checkbox("Naoto", key='-na-'), sg.Push(),
+        sg.Checkbox("Taiga", key='-t-'), sg.Push(), sg.Checkbox("Yoichi", key='-yi-'), sg.Push(),
+        sg.Checkbox("Natsumi", key='-n-'), sg.Push(), sg.Checkbox("Hunter", key='-hu-')],
         [sg.VPush()],
-        [sg.Push(), sg.Checkbox("Hiro", key='-cb_sm_hiro-'), sg.Push(), sg.Checkbox("Keitaro", key='cb_sm_keitaro-'), sg.Push(),
-        sg.Checkbox("Yuri", key='-cb_sm_yuri-'), sg.Push(), sg.Checkbox("Goro", key='-cb_sm_goro-'), sg.Push(),
-        sg.Checkbox("Aiden", key='-cb_sm_aiden-'), sg.Push()],
+        [sg.Checkbox("Hiro", key='-hi-'), sg.Push(), sg.Checkbox("Keitaro", key='k-'), sg.Push(),
+        sg.Checkbox("Yuri", key='-yu-'), sg.Push(), sg.Checkbox("Goro", key='-g-'), sg.Push(),
+        sg.Checkbox("Aiden", key='-a-'), sg.Push(), sg.Checkbox("William", key='-w')],
         [sg.VPush()],
     ]
 
@@ -124,14 +129,14 @@ def get_main_window():
         ['Help', ['Documentation', 'About']],
     ]
 
-    master_layout = [
+    layout = [
         [sg.Menu(window_menu)],
         [sg.Column(main_column)],
         [sg.ProgressBar(max_value=100, orientation='horizontal', expand_x=True, key='-progress_bar-', size=(20, 20), style='winnative')],
         [sg.Text('Status:'), sg.Text('Idle', key='-current_status-', size=(75, None), auto_size_text=True)],
     ]
 
-    main_window = sg.Window(title=title, layout=master_layout, icon="icon.png")
+    main_window = sg.Window(title=title, layout=layout, icon="icon.png")
     return main_window
     
 window = get_main_window()
@@ -203,7 +208,7 @@ def disable_ea_extract_assets_btn():
 def enable_ea_extract_assets_btn():
     window['-extract_assets_btn-'].update(button_color='Green', disabled = False)
 
-def ea_extract_assets(values):
+def extract_assets(values):
     rpapath = values['-ea_rpa_path-']
     ea_dest_folder = values["-ea_dest_folder-"]
 
@@ -329,7 +334,7 @@ while True:
         switch_game(values)
 
     if event == '-extract_assets_btn-':
-        ea_extract_assets(values)
+        extract_assets(values)
 
     if event == '-update_status-':
         update_status(values['-update_status-'])
