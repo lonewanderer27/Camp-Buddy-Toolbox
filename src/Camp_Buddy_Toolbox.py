@@ -323,20 +323,20 @@ def switch_game(values):
         window['-cb_sm_chars-'].update(visible=True)
 
 def export_to_file():
-    window['-ed_dest_folder_txt-'].update(visible=False)
     window['-ed_dest_file_txt-'].update(visible=True)
-    window['-ed_dest_folder-'].update(visible=True)
-    window['-ed_dest_folder_browse-'].update(visible=True)
-    window['-ed_dest_file-'].update(visible=False)
-    window['-ed_dest_file_save_as-'].update(visible=False)
+    window['-ed_dest_file-'].update(visible=True)
+    window['-ed_dest_file_save_as-'].update(visible=True)
+    window['-ed_dest_folder-'].update(visible=False)
+    window['-ed_dest_folder_browse-'].update(visible=False)
+    window['-ed_dest_folder_txt-'].update(visible=False)
 
 def export_to_folder():
     window['-ed_dest_folder_txt-'].update(visible=True)
+    window['-ed_dest_folder-'].update(visible=True)
+    window['-ed_dest_folder_browse-'].update(visible=True)
     window['-ed_dest_file_txt-'].update(visible=False)
-    window['-ed_dest_folder-'].update(visible=False)
-    window['-ed_dest_folder_browse-'].update(visible=False)
-    window['-ed_dest_file-'].update(visible=True)
-    window['-ed_dest_file_save_as-'].update(visible=True)
+    window['-ed_dest_file-'].update(visible=False)
+    window['-ed_dest_file_save_as-'].update(visible=False)
 
 def rpy_files_folder_path_empty():
     update_status('Error. Folder containing .rpy Files is empty')
