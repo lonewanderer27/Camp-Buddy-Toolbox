@@ -4,7 +4,7 @@ import os
 import sys
 import ntpath
 import webbrowser
-from rpatool import RenPyArchive
+from rpatool.rpatool import RenPyArchive
 import PySimpleGUI as sg
 from pprint import pprint
 from datetime import date
