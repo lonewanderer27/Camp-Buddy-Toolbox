@@ -71,6 +71,7 @@ TODO
 - [ ] Search function in listing the RPA file contents
 - [ ] Choose what contents in the RPA file should be extracted
 - [ ] Use the QT Port of PySimpleGUI
+- [ ] Release compiled executable for Windows and Mac (hopefully)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -91,6 +92,7 @@ Don't forget to give the project a star! Thanks again!
 5. Open a Pull Request
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+
 
 
 <!-- LICENSE -->
@@ -116,7 +118,7 @@ Project Link: [https://github.com/lonewanderer27/Camp-Buddy-Toolbox](https://git
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* [rpatool](https://github.com/Shizmob/rpatool)
+* [rpatool](https://github.com/Shizmob/rpatool)   
 * [unrpa](https://github.com/Lattyware/unrpa)
 * [PySimpleGUI](https://github.com/PySimpleGUI/PySimpleGUI)
 * [Font Awesome](https://fontawesome.com)
