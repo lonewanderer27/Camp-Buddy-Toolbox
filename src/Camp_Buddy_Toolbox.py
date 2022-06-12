@@ -223,7 +223,7 @@ def extract_assets(values):
 
     unrpa = UnRPA(
         filename=rpapath,
-        camp_buddy_tool_window=window,
+        camp_buddy_toolbox_window=window,
         path=ea_dest_folder,
         verbosity=verbosity
     )

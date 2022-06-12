@@ -80,7 +80,7 @@ class UnRPA:
     def __init__(
         self,
         filename: str,
-        camp_buddy_tool_window: Optional[any] = None,
+        camp_buddy_toolbox_window: Optional[any] = None,
         verbosity: int = -1,
         path: Optional[str] = None,
         mkdir: bool = False,
@@ -104,7 +104,7 @@ class UnRPA:
 
         # we added window here so UnRPA can communicate with Camp Buddy Tool
         # using window.write_event_value method
-        self.window = camp_buddy_tool_window
+        self.window = camp_buddy_toolbox_window
 
     def log(
         self, verbosity: int, human_message: str, machine_message: str = None
