@@ -10,7 +10,8 @@
   <h3 align="center">Camp Buddy Toolbox</h3>
 
   <p align="center">
-    A PySimpleGUI app that allows you to extract assets and character dialogs of Camp Buddy easily!
+    An application that allows you to extract assets and character dialogs of Camp Buddy easily!
+    Built With [PySimpleGUI](https://pysimplegui.readthedocs.io/en/latest/)
     <br />
     <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
     <br />
@@ -45,7 +46,35 @@ Features:
 
 
 
-### Built With [PySimpleGUI](https://pysimplegui.readthedocs.io/en/latest/)
+### Installation
+
+TODO
+   ```
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
+<!-- USAGE EXAMPLES -->
+## Usage
+
+TODO
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
+<!-- ROADMAP -->
+## Roadmap
+
+- [x] List RPA Files
+- [x] Extract Dialog Lines
+- [ ] Search function in listing the RPA file contents
+- [ ] Choose what contents in the RPA file should be extracted
+- [ ] Use the QT Port of PySimpleGUI
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 
 
 <!-- CONTRIBUTING -->
