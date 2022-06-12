@@ -11,16 +11,15 @@
 
   <p align="center">
     An application that allows you to extract assets and character dialogs of Camp Buddy easily!
-    Built with <a href="https://github.com/othneildrew/Best-README-Template">PySimpleGUI</a>
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    Built with <a href="https://github.com/othneildrew/Best-README-Template">PySimpleGUI</a>
     <br />
     <br />
     <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
+    <a href="https://github.com/lonewanderer27/Camp-Buddy-Toolbox/issues">Report Bug</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+    <a href="https://github.com/lonewanderer27/Camp-Buddy-Toolbox/issues">Request Feature</a>
   </p>
 </div>
 
