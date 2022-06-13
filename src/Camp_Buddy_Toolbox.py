@@ -13,7 +13,7 @@ if sg.running_windows():
     windll.shcore.SetProcessDpiAwareness(1) # FIXES BLURRINESS IF THE PROGRAM IS RUNNING ON WINDOWS PC WITH HIGH DPI DISPLAY
 
 current_directory = os.getcwd
-debug_mode = True
+debug_mode = False
 sg.theme('DarkBrown3')
 
 # UnRPA Settings
@@ -502,7 +502,7 @@ def extract_dialogs(values):
         destination_directory=ed_dest_folder,
         delimeter=delimeter,
         show_stats=True,
-        verbose_level=0,
+        verbose_level=3,
         cb_toolbox_window=window
     )
 

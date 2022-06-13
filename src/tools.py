@@ -62,3 +62,8 @@ def list_rpa_files(rpafile: str) -> list:
     rpaprocessor = RenPyArchive(rpafile)
     files_list = sorted(rpaprocessor.list())
     return files_list
+
+if sg.running_windows():
+    icon = 'icon.ico'
+elif sg.running_linux():
+    icon = 'icon.png'

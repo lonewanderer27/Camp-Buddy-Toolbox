@@ -272,7 +272,7 @@ class CBDialogExtractor:
         '''Extracts character dialogs from a file then outputs them into the dialog dictionary'''
 
         # OPEN THE FILE
-        file = open(rpyfilepath, 'r')   
+        file = open(rpyfilepath, 'r', encoding='utf-8')   
 
         # GET ALL THE LINES OF TEXTS IN THE FILE THEN REMOVE ALL NEWLINE SYMBOLS
         lines_stripped = self.strip_newline_from_text_lines(file.readlines())

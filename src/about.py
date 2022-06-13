@@ -1,5 +1,5 @@
 import PySimpleGUI as sg
-from tools import center, resource_path, todays_date, open_url
+from tools import center, resource_path, todays_date, icon
 
 title = 'Camp Buddy Toolbox'
 description = 'Camp Buddy Toolbox allows you to extract assets and dialogs of Camp Buddy easily!'
@@ -58,7 +58,7 @@ def get_about_window():
         ], tab_location='top')]
     ]
 
-    return sg.Window(title=f'About {title}', layout=about_window_layout, icon='icon.png', finalize=True)
+    return sg.Window(title=f'About {title}', layout=about_window_layout, icon=icon, finalize=True)
 
 def about():
     about_window = get_about_window()
