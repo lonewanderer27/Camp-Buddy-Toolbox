@@ -68,8 +68,8 @@ TODO
 
 - [x] List RPA Files
 - [x] Extract Dialog Lines
-- [ ] Search function in listing the RPA file contents
-- [ ] Choose what contents in the RPA file should be extracted
+- [ ] Selectively choose what contents in the RPA file should be extracted
+- [ ] Search the contents of an RPA file
 - [ ] Use the QT Port of PySimpleGUI
 - [ ] Release compiled executable for Windows and Mac (hopefully)
 
