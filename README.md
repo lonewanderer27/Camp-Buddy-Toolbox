@@ -49,21 +49,15 @@ So I thought to myself.. why not make an app that can extract scripts from Camp 
 ### Installation
 
 #### For Windows:
-##### Prerequisites:
-- [Download](https://www.python.org/downloads/) and install Python if you haven't installed it yet.
-
 1. Go to Releases page in this GitHub repository (it should be at the right side of the website).
-2. On the latest release, click the Source code (zip) to download it.
-3. Extract the zip to a folder.
-4. On that folder you extracted the zip from, right click then 'Open Powershell here'
-5. Type: ```pip install PySimpleGUI``` to install PySimpleGUI
-6. Type: ```python <space>``` then drag the Camp_Buddy_Toolbox.py to Powershell. Press Enter
+2. On the latest release, click the Camp_Buddy_Toolbox_Windows.exe to download it.
+3. Double click to run the program.
 
 #### For Linux:
 1. Go to Releases page in this GitHub repository (it should be at the right side of the website).
-2. On the latest release, click the Camp_Buddy_Toolbox to download it.
-3. Make it executable: ```chmod +x ./Camp_Buddy_Toolbox```
-4. Double click to launch
+2. On the latest release, click the Camp_Buddy_Toolbox_Linux to download it.
+3. Make it executable: ```chmod +x ./Camp_Buddy_Toolbox_Linux```
+4. Double click to run the program.
 
 #### For Mac:
 - I don't have a Mac, however, I'm open to someone who wants to volunteer to help fix bugs and compile Camp Buddy Toolbox on MacOS.
@@ -116,7 +110,7 @@ Don't forget to give the project a star! Thanks again!
 <!-- LICENSE -->
 ## License
 
-camp Buddy Toolbox is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+Camp Buddy Toolbox is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
 Camp Buddy Toolbox is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 
@@ -140,12 +134,12 @@ Project Link: [https://github.com/lonewanderer27/Camp-Buddy-Toolbox](https://git
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
+#### Camp Buddy Toolbox wouldn't be possible if it weren't for these amazing projects:
 * [rpatool](https://github.com/Shizmob/rpatool)   
 * [unrpa](https://github.com/Lattyware/unrpa)
 * [PySimpleGUI](https://github.com/PySimpleGUI/PySimpleGUI)
 * [Font Awesome](https://fontawesome.com)
 * [Best README Template](https://github.com/othneildrew/Best-README-Template)
-* [GitHub Pages](https://pages.github.com)
 * [GNOME](https://www.gnome.org/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
