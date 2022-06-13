@@ -4,7 +4,7 @@ from tools import center, resource_path, todays_date, icon
 title = 'Camp Buddy Toolbox'
 description = 'Camp Buddy Toolbox allows you to extract assets and dialogs of Camp Buddy easily!'
 short_description = 'Allows you to extract assets and dialogs of Camp Buddy easily!'
-version_num = '0.9 Alpha'
+version_num = '0.9.3 Alpha'
 github_username = 'lonewanderer27'
 my_github_link = 'https://github.com/lonewanderer27'
 nickname = 'Jay'
