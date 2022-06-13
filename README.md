@@ -93,7 +93,7 @@ https://user-images.githubusercontent.com/28822916/173349062-0bcdaf72-1724-4ccd-
 - [ ] Selectively choose what contents in the RPA file should be extracted
 - [ ] Search the contents of an RPA file
 - [ ] Use the QT Port of PySimpleGUI
-- [ ] Release compiled executable for Windows and Mac (hopefully)
+- [ ] Release compiled executable for Mac (hopefully)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
