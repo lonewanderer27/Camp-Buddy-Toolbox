@@ -104,14 +104,6 @@ def get_main_window():
         [sg.VPush()],
     ]
 
-    # extract_dialogs_to_dir_column = [
-    #     [sg.Text('Destination Folder:'), sg.Input(key='-ed_dest_folder-', expand_x=True), sg.FolderBrowse(key='-ed_folder_browse-')]
-    # ]
-
-    # extract_dialogs_to_file_column = [
-    #     [sg.Text('Destination File:'), sg.Input(key='-ed_dest_file-', expand_x=True), sg.FileSaveAs(key='-ed_file_save_as-', file_types=(('CSV File', '.csv'), ('Text File', '.txt')), )]
-    # ]
-
     extract_dialogs_tab = [
         [sg.Text('Folder Containing .rpy Files:'), sg.Input(key='-rpy_files_folder_path-'), sg.FolderBrowse(key='-ed_browse_rpy_files_folder_path_btn-')],
         [sg.Text('Game:'),
@@ -151,7 +143,7 @@ def get_main_window():
     main_column = [
         [sg.TabGroup([
             [sg.Tab('Extract Assets', extract_assets_tab, key='-ea_tab-'), sg.Tab('Extract Dialogs', extract_dialogs_tab, key='-ed_tab-')]
-        ], expand_x=True, tab_location="Top", enable_events=True, key='-switched_tab-')],
+        ], tab_location="Top", enable_events=True, key='-switched_tab-')],
     ]
 
     window_menu = [
@@ -162,8 +154,8 @@ def get_main_window():
     layout = [
         [sg.Menu(window_menu)],
         [sg.Column(main_column)],
-        [sg.ProgressBar(max_value=100, orientation='horizontal', expand_x=True, key='-progress_bar-', size=(20, 20), style='winnative')],
-        [sg.Text('Status:'), sg.Text('Idle', key='-current_status-', size=(75, None), auto_size_text=True)],
+        [sg.ProgressBar(max_value=100, orientation='horizontal', key='-progress_bar-', size=(45, 20), style='winnative')],
+        [sg.Text('Status:'), sg.Text('Idle', key='-current_status-', size=(50, None))],
     ]
 
     main_window = sg.Window(title=title, layout=layout, icon="icon.png")
