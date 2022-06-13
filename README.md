@@ -21,7 +21,7 @@
     ·
     <a href="https://github.com/lonewanderer27/Camp-Buddy-Toolbox/issues">Request Feature</a>
     ·
-    <a href="legal">Legal Notice</a>
+    <a href="#legal">Legal Notice</a>
   </p>
 </div>
 
