@@ -38,7 +38,7 @@ However, that program is a command line application, meaning a user would have t
 
 So I thought to myself.. why not make an app that can extract scripts from Camp Buddy? (and more that I can think of in the future)
 
-Features:
+#### Features:
 * Preview and Extract the contents of an RPA file
 * Extract dialogs of Camp Buddy characters onto a CSV file that can be used to make a Discord chatbot
 
