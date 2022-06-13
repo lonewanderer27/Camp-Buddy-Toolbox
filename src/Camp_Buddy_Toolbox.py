@@ -241,6 +241,9 @@ def ea_view_content(values):
         update_rpa_file_list(list_rpa_files_2(rpapath))
         update_status(f'{get_filename_from_path(rpapath)} contents listed')
 
+def disable_ea_button():
+    window['-extract_assets_btn-'].update(button_color='Gray', disabled=True)
+
 def disable_ea_tab_elements():
     '''Disables all elements in Extract Assets Tab'''
 
@@ -248,7 +251,10 @@ def disable_ea_tab_elements():
     window['-rpa_file_list-'].update(disabled=True)
     window['-ea_filebrowse-'].update(disabled=True)
     window['-ea_folder_browse-'].update(disabled=True)
-    window['-extract_assets_btn-'].update(button_color='Gray', disabled = True)
+    disable_ea_button()
+
+def enable_ea_button():
+    window['-extract_assets_btn-'].update(button_color='Green', disabled=False)
 
 def enable_ea_tab_elements():
     '''Enables all elements in Extract Assets Tab'''
@@ -258,7 +264,7 @@ def enable_ea_tab_elements():
     window['-ea_viewcontent-'].update(disabled=False)
     window['-ea_filebrowse-'].update(disabled=False)
     window['-ea_folder_browse-'].update(disabled=False)
-    window['-extract_assets_btn-'].update(button_color='Green', disabled = False)
+    enable_ea_button()
 
 def extract_assets(values):
     rpapath = values['-ea_rpa_path-']
@@ -283,12 +289,18 @@ def extract_assets(values):
     long_operation = True
     disable_ea_tab_elements()
 
+    # Disabled the extract dialogs button
+    disable_ed_button()
+
 def ea_done(values):
     rpapath = values['-ea_rpa_path-']
     ea_dest_folder = values["-ea_dest_folder-"]
 
     # Enable the extract assets tab elements
     enable_ea_tab_elements()
+
+    # Enable the extract dialogs button
+    enable_ed_button()
 
     # Make the progress bar 100% to indicate completeness
     finish_progress_bar()
@@ -393,6 +405,9 @@ def enable_ed_checkboxes():
     for checkbox in cb_sm_checkboxes:
         checkbox.update(disabled=False)
 
+def disable_ed_button():
+    window['-extract_dialogs_btn-'].update(button_color='Gray', disabled=True)
+
 def disable_ed_tab_elements():
     window['-rpy_files_folder_path-'].update(disabled=True)
     window['-ed_browse_rpy_files_folder_path_btn-'].update(disabled=True)
@@ -407,7 +422,10 @@ def disable_ed_tab_elements():
     window['-ed_dest_folder_browse-'].update(disabled=True)
     window['-ed_dest_file-'].update(disabled=True)
     window['-ed_dest_file_save_as-'].update(disabled=True)
-    window['-extract_dialogs_btn-'].update(disabled=True)
+    disable_ed_button()
+
+def enable_ed_button():
+    window['-extract_dialogs_btn-'].update(button_color='Green', disabled=False)
 
 def enable_ed_tab_elements():
     window['-rpy_files_folder_path-'].update(disabled=False)
@@ -423,7 +441,7 @@ def enable_ed_tab_elements():
     window['-ed_dest_folder_browse-'].update(disabled=False)
     window['-ed_dest_file-'].update(disabled=False)
     window['-ed_dest_file_save_as-'].update(disabled=False)
-    window['-extract_dialogs_btn-'].update(disabled=False)   
+    enable_ed_button()
 
 def ed_checks(values):
     '''Warns the user if any of the required fields in Extract Dialogs are empty'''
@@ -519,12 +537,18 @@ def extract_dialogs(values):
     long_operation = True
     disable_ed_tab_elements()
 
+    # Enable the extract assets button
+    disable_ea_button()
+
 def ed_done(values):
     ed_dest_folder = values['-ed_dest_folder-']
     ed_dest_file = values['-ed_dest_file-']
 
     # Enable extract dialogs tab elements
     enable_ed_tab_elements()
+
+    # Enable the extract assets button
+    enable_ea_button()
 
     # Make the progress bar 100% to indicate completeness
     finish_progress_bar()
