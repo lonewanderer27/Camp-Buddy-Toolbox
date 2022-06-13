@@ -134,13 +134,12 @@ Project Link: [https://github.com/lonewanderer27/Camp-Buddy-Toolbox](https://git
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-#### Camp Buddy Toolbox wouldn't be possible if it weren't for these amazing tools:
+#### Camp Buddy Toolbox wouldn't be possible if it weren't for these amazing projects:
 * [rpatool](https://github.com/Shizmob/rpatool)   
 * [unrpa](https://github.com/Lattyware/unrpa)
 * [PySimpleGUI](https://github.com/PySimpleGUI/PySimpleGUI)
 * [Font Awesome](https://fontawesome.com)
 * [Best README Template](https://github.com/othneildrew/Best-README-Template)
-* [GitHub Pages](https://pages.github.com)
 * [GNOME](https://www.gnome.org/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
