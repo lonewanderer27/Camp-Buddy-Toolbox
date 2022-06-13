@@ -27,7 +27,7 @@
 ## About The Project
 
 <div align="center">
-  <img src="Screenshots/Screenshot_Extract_Assets_Tab.png" alt="Logo">
+  <img src="Screenshots/Screenshot_Extract_Dialogs_Tab.png" alt="Logo">
 </div>
 
 <br>
