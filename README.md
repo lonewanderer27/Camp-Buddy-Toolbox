@@ -3,7 +3,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
+  <a href="https://github.com/lonewanderer27/Camp-Buddy-Toolbox">
     <img src="icon.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -12,7 +12,7 @@
   <p align="center">
     An application that allows you to extract assets and character dialogs of Camp Buddy easily!
     <br />
-    Built with <a href="https://github.com/othneildrew/Best-README-Template">PySimpleGUI</a>
+    Built with <a href="https://github.com/PySimpleGUI/PySimpleGUI">PySimpleGUI</a>
     <br />
     <br />
     <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
@@ -98,7 +98,11 @@ Don't forget to give the project a star! Thanks again!
 <!-- LICENSE -->
 ## License
 
-Camp Buddy Toolbox is distributed under the The GNU General Public License v3.0. See `COPYING` for more information.
+camp Buddy Toolbox is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+Camp Buddy Toolbox is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with this program. If not, see <https://www.gnu.org/licenses/>.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
