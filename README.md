@@ -128,6 +128,13 @@ You should have received a copy of the GNU General Public License along with thi
 
 
 
+<!-- LEGAL NOTICE -->
+## Legal Notice
+
+I created this program for you, as a fan of Camp Buddy, to create your own Discord Chatbot and perhaps also look at the assets yourself. However having the tool doesn't mean you have a right to share any assets including images, scripts, audios to others online without permission from the author. By doing so, you're infringing on BLits Games Intellectual Property and you are subject to legal repercussions!
+
+
+
 <!-- CONTACT -->
 ## Contact
 
