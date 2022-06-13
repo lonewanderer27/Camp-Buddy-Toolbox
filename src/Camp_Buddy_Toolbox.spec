@@ -8,7 +8,7 @@ a = Analysis(
     ['Camp_Buddy_Toolbox.py'],
     pathex=[],
     binaries=[],
-    datas=[('icon.png', '.')],
+    datas=[('icon.ico', '.'), ('icon.png', '.')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},

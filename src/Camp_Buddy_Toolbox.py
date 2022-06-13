@@ -163,9 +163,9 @@ def get_main_window():
     ]
 
     if sg.running_windows():
-        icon = 'icon.ico'
+        icon = resource_path('icon.ico')
     elif sg.running_linux():
-        icon = 'icon.png'
+        icon = resource_path('icon.png')
 
     main_window = sg.Window(title=title, layout=layout, icon=icon)
     return main_window
