@@ -10,7 +10,7 @@ from about import *
 
 if sg.running_windows():
     from ctypes import windll
-    windll.shcore.SetProcessDpiAwareness(1)
+    windll.shcore.SetProcessDpiAwareness(1) # FIXES BLURRINESS IF THE PROGRAM IS RUNNING ON WINDOWS PC WITH HIGH DPI DISPLAY
 
 current_directory = os.getcwd
 debug_mode = True
@@ -162,7 +162,12 @@ def get_main_window():
         [sg.Text('Status:'), sg.Text('Idle', key='-current_status-', size=(50, None))],
     ]
 
-    main_window = sg.Window(title=title, layout=layout, icon="icon.png")
+    if sg.running_windows():
+        icon = 'icon.ico'
+    elif sg.running_linux():
+        icon = 'icon.png'
+
+    main_window = sg.Window(title=title, layout=layout, icon=icon)
     return main_window
     
 window = get_main_window()
