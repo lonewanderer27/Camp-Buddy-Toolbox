@@ -8,6 +8,10 @@ from unrpa import UnRPA
 from tools import *
 from about import *
 
+if sg.running_windows():
+    from ctypes import windll
+    windll.shcore.SetProcessDpiAwareness(1)
+
 current_directory = os.getcwd
 debug_mode = True
 sg.theme('DarkBrown3')
@@ -154,7 +158,7 @@ def get_main_window():
     layout = [
         [sg.Menu(window_menu)],
         [sg.Column(main_column)],
-        [sg.ProgressBar(max_value=100, orientation='horizontal', key='-progress_bar-', size=(45, 20), style='winnative')],
+        [sg.ProgressBar(max_value=100, orientation='horizontal', key='-progress_bar-', size=(56, 20), style='winnative')],
         [sg.Text('Status:'), sg.Text('Idle', key='-current_status-', size=(50, None))],
     ]
 
