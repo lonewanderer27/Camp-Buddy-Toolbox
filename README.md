@@ -15,7 +15,7 @@
     Built with <a href="https://github.com/PySimpleGUI/PySimpleGUI">PySimpleGUI</a>
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    <a href="https://github.com/lonewanderer27/Camp-Buddy-Toolbox">View Demo</a>
     ·
     <a href="https://github.com/lonewanderer27/Camp-Buddy-Toolbox/issues">Report Bug</a>
     ·
@@ -34,7 +34,7 @@
 
 I once wanted to create a Discord chatbot that speaks exactly like Keitaro, however, none have written a dialog extractor specifically for Camp Buddy, so I wrote one <a href="https://github.com/lonewanderer27/Camp-Buddy-Dialog-Extractor">here</a>.
 
-But still, this tool is a command line application meaning a user would have to know how to use a terminal which is not user friendly... What if someone who's inexperienced in coding just wants to have fun with their friends, talking to Keitaro or Hiro in their Discord server, like I once wanted...
+However, that program is a command line application, meaning a user would have to know how to use a terminal which is not very user friendly... What if someone who's inexperienced in coding just wants to have fun with their friends, talking to Keitaro or Hiro in their Discord server, like I once wanted...
 
 So I thought to myself.. why not make an app that can extract scripts from Camp Buddy? (and more that I can think of in the future)
 
