@@ -152,7 +152,7 @@ def get_main_window():
 
     window_menu = [
         ['File', ['Exit']],
-        ['Help', ['Documentation', 'About']],
+        ['Help', ['GitHub Repository', 'About']],
     ]
 
     if sg.running_windows():
@@ -242,7 +242,8 @@ def ea_view_content(values):
         update_status(f'{get_filename_from_path(rpapath)} contents listed')
 
 def disable_ea_tab_elements():
-    # DISABLE EXTRACT ASSETS BUTTON
+    '''Disables all elements in Extract Assets Tab'''
+
     window['-ea_rpa_path-'].update(disabled=True)
     window['-rpa_file_list-'].update(disabled=True)
     window['-ea_filebrowse-'].update(disabled=True)
@@ -250,6 +251,8 @@ def disable_ea_tab_elements():
     window['-extract_assets_btn-'].update(button_color='Gray', disabled = True)
 
 def enable_ea_tab_elements():
+    '''Enables all elements in Extract Assets Tab'''
+
     window['-ea_rpa_path-'].update(disabled=False)
     window['-rpa_file_list-'].update(disabled=False)
     window['-ea_viewcontent-'].update(disabled=False)
@@ -568,6 +571,9 @@ while True:
 
     if event == 'Exit' or event == sg.WIN_CLOSED:
         break
+
+    if event == 'GitHub Repository':
+        open_url(github_repository)
 
     if event == '-switched_tab-':
         export_to_file()

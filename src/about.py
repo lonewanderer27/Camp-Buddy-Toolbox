@@ -7,6 +7,7 @@ short_description = 'Allows you to extract assets and dialogs of Camp Buddy easi
 version_num = '0.9.3 Alpha'
 github_username = 'lonewanderer27'
 my_github_link = 'https://github.com/lonewanderer27'
+github_repository = 'https://github.com/lonewanderer27/Camp-Buddy-Toolbox'
 nickname = 'Jay'
 license_notice = f'''{title} is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
