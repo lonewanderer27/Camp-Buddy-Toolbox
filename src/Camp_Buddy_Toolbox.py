@@ -155,10 +155,16 @@ def get_main_window():
         ['Help', ['Documentation', 'About']],
     ]
 
+    if sg.running_windows():
+        progress_bar_size = (56, 20)
+    elif sg.running_linux() or sg.running_mac():
+        progress_bar_size = (55, 20)
+
+
     layout = [
         [sg.Menu(window_menu)],
         [sg.Column(main_column)],
-        [sg.ProgressBar(max_value=100, orientation='horizontal', key='-progress_bar-', size=(56, 20), style='winnative')],
+        [sg.ProgressBar(max_value=100, orientation='horizontal', key='-progress_bar-', size=progress_bar_size, style='winnative')],
         [sg.Text('Status:'), sg.Text('Idle', key='-current_status-', size=(50, None))],
     ]
 
