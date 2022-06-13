@@ -134,6 +134,7 @@ Project Link: [https://github.com/lonewanderer27/Camp-Buddy-Toolbox](https://git
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
+#### Camp Buddy Toolbox wouldn't be possible if it weren't for these amazing tools:
 * [rpatool](https://github.com/Shizmob/rpatool)   
 * [unrpa](https://github.com/Lattyware/unrpa)
 * [PySimpleGUI](https://github.com/PySimpleGUI/PySimpleGUI)
