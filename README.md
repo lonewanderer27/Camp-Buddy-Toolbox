@@ -15,7 +15,7 @@
     Built with <a href="https://github.com/PySimpleGUI/PySimpleGUI">PySimpleGUI</a>
     <br />
     <br />
-    <a href="https://github.com/lonewanderer27/Camp-Buddy-Toolbox">View Demo</a>
+    <a href="demo">View Demo</a>
     ·
     <a href="https://github.com/lonewanderer27/Camp-Buddy-Toolbox/issues">Report Bug</a>
     ·
