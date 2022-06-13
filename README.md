@@ -49,21 +49,15 @@ So I thought to myself.. why not make an app that can extract scripts from Camp 
 ### Installation
 
 #### For Windows:
-##### Prerequisites:
-- [Download](https://www.python.org/downloads/) and install Python if you haven't installed it yet.
-
 1. Go to Releases page in this GitHub repository (it should be at the right side of the website).
-2. On the latest release, click the Source code (zip) to download it.
-3. Extract the zip to a folder.
-4. On that folder you extracted the zip from, right click then 'Open Powershell here'
-5. Type: ```pip install PySimpleGUI``` to install PySimpleGUI
-6. Type: ```python <space>``` then drag the Camp_Buddy_Toolbox.py to Powershell. Press Enter
+2. On the latest release, click the Camp_Buddy_Toolbox_Windows.exe to download it.
+3. Double click to run the program.
 
 #### For Linux:
 1. Go to Releases page in this GitHub repository (it should be at the right side of the website).
-2. On the latest release, click the Camp_Buddy_Toolbox to download it.
-3. Make it executable: ```chmod +x ./Camp_Buddy_Toolbox```
-4. Double click to launch
+2. On the latest release, click the Camp_Buddy_Toolbox_Linux to download it.
+3. Make it executable: ```chmod +x ./Camp_Buddy_Toolbox_Linux```
+4. Double click to run the program.
 
 #### For Mac:
 - I don't have a Mac, however, I'm open to someone who wants to volunteer to help fix bugs and compile Camp Buddy Toolbox on MacOS.
