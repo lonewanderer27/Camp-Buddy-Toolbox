@@ -77,58 +77,69 @@ class CBDialogExtractor:
         self.verbose_level = verbose_level
         self.chars_aliases = {
             # Camp Buddy Scoutmasters Edition Character Aliases
-            'a': 'Aiden',
-            'u': 'Andre',
-            'g': 'Goro',
-            'yo': 'Yoshinori',
-            'yu': 'Yuri',
-            'l': 'Lloyd',
-            'd': 'Darius',
-            'j': 'Hyunjin',
-            'e': 'Emilia',
-            'yi': 'Yoichi',
-            't': 'Taiga',
-            'k': 'Keitaro',
-            'hu': 'Hunter',
-            'hi': 'Hiro',
-            'n': 'Natsumi',
-            'na': 'Naoto',
-            'nag': 'Guest',
-            'nas': 'Stripper',
-            'r': 'Bellboy',
-            'm': 'Masseur',
-            'bt': 'Bartender',
-            'r': 'Reimond',
-            'ju': 'Justin',
-            'o': 'Officiator',
-            'ol': 'Doctor',
-            'v': 'Vera',
-            'w': 'William',
-            'wo': 'Workers',
-            'ar': 'Architect',
-            'fo': 'Foreman',
-
+            2: {
+                'a': 'Aiden',
+                'u': 'Andre',
+                'g': 'Goro',
+                'yo': 'Yoshinori',
+                'yu': 'Yuri',
+                'l': 'Lloyd',
+                'd': 'Darius',
+                'j': 'Hyunjin',
+                'e': 'Emilia',
+                'yi': 'Yoichi',
+                't': 'Taiga',
+                'k': 'Keitaro',
+                'hu': 'Hunter',
+                'hi': 'Hiro',
+                'n': 'Natsumi',
+                'na': 'Naoto',
+                'nag': 'Guest',
+                'nas': 'Stripper',
+                'r': 'Bellboy',
+                'm': 'Masseur',
+                'bt': 'Bartender',
+                'r': 'Reimond',
+                'ju': 'Justin',
+                'o': 'Officiator',
+                'ol': 'Doctor',
+                'v': 'Vera',
+                'w': 'William',
+                'wo': 'Workers',
+                'ar': 'Architect',
+                'fo': 'Foreman',
+            },
             # Camp Buddy Character Aliases
-            'f': 'Felix',
-            'e': 'Eduard',
-            'l': 'Lee',
-            'con': 'Conductor',
-            'ra': 'Rayne',
-            'to': 'Toshu',
-            'ic': 'Ichiru',
-            'co': 'Connor',
-            'ji': 'Jirou',
-            'ha': 'Avan',
-            'yt': 'Yuuto',
-            'hr': 'Haruki',
-            'no': 'Noah',
-            'ch': 'Chiaki',
-            'hm': 'Hina',
-            'y': 'Yuki',
-            'he': 'Heather',
-            'ar': 'Archer',
-            'ki': 'Kieran',
-
+            1: {
+                'a': 'Aiden',
+                'g': 'Goro',
+                'yo': 'Yoshinori',
+                'yu': 'Yuri',
+                'yi': 'Yoichi',
+                't': 'Taiga',
+                'k': 'Keitaro',
+                'hu': 'Hunter',
+                'hi': 'Hiro',
+                'n': 'Natsumi',
+                'na': 'Naoto',
+                'f': 'Felix',
+                'e': 'Eduard',
+                'l': 'Lee',
+                'ra': 'Rayne',
+                'to': 'Toshu',
+                'ic': 'Ichiru',
+                'co': 'Connor',
+                'ji': 'Jirou',
+                'ha': 'Avan',
+                'yt': 'Yuuto',
+                'hr': 'Haruki',
+                'no': 'Noah',
+                'ch': 'Chiaki',
+                'hm': 'Hina',
+                'he': 'Heather',
+                'ar': 'Archer',
+                'ki': 'Kieran',
+            }
             # I only included the characters that it makes sense for someone
             # to get the dialogs of.
             #
@@ -137,6 +148,68 @@ class CBDialogExtractor:
             # And as such an error would occur if someone were to extract
             # their dialogs using their alias.
         }
+        # self.chars_aliases = {
+        #     # Camp Buddy Scoutmasters Edition Character Aliases
+        #     'a': 'Aiden',
+        #     'u': 'Andre',
+        #     'g': 'Goro',
+        #     'yo': 'Yoshinori',
+        #     'yu': 'Yuri',
+        #     'l': 'Lloyd',
+        #     'd': 'Darius',
+        #     'j': 'Hyunjin',
+        #     'e': 'Emilia',
+        #     'yi': 'Yoichi',
+        #     't': 'Taiga',
+        #     'k': 'Keitaro',
+        #     'hu': 'Hunter',
+        #     'hi': 'Hiro',
+        #     'n': 'Natsumi',
+        #     'na': 'Naoto',
+        #     'nag': 'Guest',
+        #     'nas': 'Stripper',
+        #     'r': 'Bellboy',
+        #     'm': 'Masseur',
+        #     'bt': 'Bartender',
+        #     'r': 'Reimond',
+        #     'ju': 'Justin',
+        #     'o': 'Officiator',
+        #     'ol': 'Doctor',
+        #     'v': 'Vera',
+        #     'w': 'William',
+        #     'wo': 'Workers',
+        #     'ar': 'Architect',
+        #     'fo': 'Foreman',
+
+        #     # Camp Buddy Character Aliases
+        #     'f': 'Felix',
+        #     'e': 'Eduard',
+        #     'l': 'Lee',
+        #     'con': 'Conductor',
+        #     'ra': 'Rayne',
+        #     'to': 'Toshu',
+        #     'ic': 'Ichiru',
+        #     'co': 'Connor',
+        #     'ji': 'Jirou',
+        #     'ha': 'Avan',
+        #     'yt': 'Yuuto',
+        #     'hr': 'Haruki',
+        #     'no': 'Noah',
+        #     'ch': 'Chiaki',
+        #     'hm': 'Hina',
+        #     'y': 'Yuki',
+        #     'he': 'Heather',
+        #     'ar': 'Archer',
+        #     'ki': 'Kieran',
+
+        #     # I only included the characters that it makes sense for someone
+        #     # to get the dialogs of.
+        #     #
+        #     # Character aliases such as 'all' and 'Aiden & Goro' are not included here.
+        #     #
+        #     # And as such an error would occur if someone were to extract
+        #     # their dialogs using their alias.
+        # }
         self.game_aliases = {
             1: 'Camp Buddy',
             2: 'Camp Buddy Scoutmasters Edition'
@@ -206,7 +279,7 @@ class CBDialogExtractor:
         if len(self.chosen_chars) == 0:
             raise ValueError('Chosen game characters is empty')
         for char in self.chosen_chars:
-            if char not in self.chars_aliases:
+            if char not in self.chars_aliases[self.game]:
                 raise ValueError("Chosen game character alias doesn't exist in character aliases")
         if self.export_to_file:
             if self.destination_file == None:
@@ -312,7 +385,7 @@ class CBDialogExtractor:
 
                         percentage, int_percentage = self.calculate_progress(current_file_num)
                         self.log(
-                            message=f'[{percentage}%] [{self.get_filename_from_path(rpyfilepath)}] {self.chars_aliases[char]}: {dialog[0]}',
+                            message=f'[{percentage}%] [{self.get_filename_from_path(rpyfilepath)}] {self.chars_aliases[self.game][char]}: {dialog[0]}',
                             verbose_level_of_message=3
                         )
 
@@ -340,7 +413,7 @@ class CBDialogExtractor:
             writer.writerow(self.header)    # WRITE THE HEADER COLUMNS
             if len(self.dialogs[self.game]) != 0:
                 for dialog in self.dialogs[self.game][char]:                # FOR EACH DIALOG OF THE CHARACTER
-                    writer.writerow([self.chars_aliases[char], dialog])     # WRITE THE CHARACTER'S NAME THEN THE DIALOG IN THE ROW
+                    writer.writerow([self.chars_aliases[self.game][char], dialog])     # WRITE THE CHARACTER'S NAME THEN THE DIALOG IN THE ROW
 
             file.close()    # CLOSE THE FILE
         return
@@ -357,7 +430,7 @@ class CBDialogExtractor:
         for char in self.dialogs[self.game]:
             if len(self.dialogs[self.game]) != 0:
                 for dialog in self.dialogs[self.game][char]:                # FOR EACH DIALOG OF THE CHARACTER
-                    writer.writerow([self.chars_aliases[char], dialog])     # WRITE THE CHARACTER'S NAME THEN THE DIALOG IN THE ROW
+                    writer.writerow([self.chars_aliases[self.game][char], dialog])     # WRITE THE CHARACTER'S NAME THEN THE DIALOG IN THE ROW
 
         file.close()    # CLOSE THE FILE
         return
@@ -373,8 +446,8 @@ class CBDialogExtractor:
         for char in self.dialogs[self.game]:
             char_lines = len(self.dialogs[self.game][char])
             char_percentage = self.calculate_dialog_part_stats(char_lines)
-            self.stats[f'{self.chars_aliases[char]} Dialog Count'] = char_lines
-            self.stats[f'{self.chars_aliases[char]} Dialog Percentage'] = f'{char_percentage}%'
+            self.stats[f'{self.chars_aliases[self.game][char]} Dialog Count'] = char_lines
+            self.stats[f'{self.chars_aliases[self.game][char]} Dialog Percentage'] = f'{char_percentage}%'
         
         message = ''
         for key in self.stats.keys(): 
