@@ -527,7 +527,7 @@ def ed_done(values):
     popup = operation_done_popup(
         title='Finished Extracting Dialogs',
         message=f'{cb_dialog_extractor.stats_str}\n\nDialogs have been extracted to:\n{ed_dest_folder if valid_path(ed_dest_folder) else ed_dest_file}',
-        dest_folder=ed_dest_folder
+        dest_folder=get_folder_path_from_filepath(values['-ed_dest_file-']) if not valid_path(values['-ed_dest_folder-']) else values['-ed_dest_folder-']
     )
 
     while True:

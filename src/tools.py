@@ -41,6 +41,9 @@ def print_debug_info(window, event, values):
 def get_filename_from_path(rpapath: str) -> str:
     return ntpath.basename(rpapath)
 
+def get_folder_path_from_filepath(folder_path: str) -> str:
+    return os.path.dirname(folder_path)
+
 def valid_path(rpapath: str):
     if not len(rpapath) == 0:
         return True
